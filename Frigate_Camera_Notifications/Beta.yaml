@@ -373,7 +373,7 @@ blueprint:
               options:
                 - mdi:homeassistant
                 - mdi:cctv
-                - "mdi:{{'account-outline' if label == 'Person' else 'dog' if label == 'Dog' else 'cat' if label == 'Cat' else 'car' if label == 'Car' else 'home-assistant'}}"
+                - "mdi:{{'account-outline' if label == 'Person' else 'dog' if label == 'Dog' else 'cat' if label == 'Cat' else 'car' if label == 'Car' else 'paw' if label == 'Animal' else 'home-assistant'}}"
               custom_value: true
         group:
           name: Group
