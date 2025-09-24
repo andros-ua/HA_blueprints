@@ -74,6 +74,10 @@ blueprint:
       name: MQTT Topic (Advanced)
       description: The MQTT topic Frigate sends review messages in.
       default: frigate/reviews
+    mqtt_payload:
+      name: MQTT Payload (Advanced)
+      description: The Frigate MQTT Payload to use.
+      default: new
     client_id:
       name: Client ID (Optional-Advanced)
       description: Used to support multiple instances of Frigate. Leave blank if you don't know what to do.
@@ -947,7 +951,7 @@ trigger_variables:
 triggers:
   - trigger: mqtt
     topic: "{{mqtt_topic}}"
-    payload: "new"
+    payload: "{{mqtt_payload}}"
     value_template: "{{value_json['type']}}"
     id: frigate-event
   - trigger: event
