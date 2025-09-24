@@ -951,7 +951,7 @@ trigger_variables:
 triggers:
   - trigger: mqtt
     topic: "{{mqtt_topic}}"
-    payload: "{{mqtt_payload}}"
+    payload: !input mqtt_payload
     value_template: "{{value_json['type']}}"
     id: frigate-event
   - trigger: event
